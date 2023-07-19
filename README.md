@@ -19,5 +19,4 @@ Run `ng build ngx-json-contextmenu` to build the project. The build artifacts wi
 
 ## To publish to npm
 
-Change to foldeer `dist/ngx-json-contextmenu` then run `npm publish` to build the project. The build artifacts will be stored in the `dist/ngx-json-contextmenu` directory.
-
+Change to foldeer `dist/ngx-json-contextmenu` then run `npm publish` to build the project. 
