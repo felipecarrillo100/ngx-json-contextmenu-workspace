@@ -41,5 +41,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felipecarrillo100/ngx-json-contextmenu-workspace"
-  }
+  },
+  "license": "MIT"
 }
