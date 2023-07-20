@@ -96,6 +96,7 @@ The component `ngx-json-contextmenu` supports the next options:
  * menuClass: allows you to define a class to customize the style
  * rtl: if true then right-to-left rtl is applied to the context menu
  * disabled: Disables the context menu, if true not context menu will be displayed
+ * menuItemTemplate: A custom template to be used to render items
 
 ## Style customization
 Define a class with `menuClass` then add the custom css style for it. Here an example 
@@ -133,11 +134,11 @@ Define a class with `menuClass` then add the custom css style for it. Here an ex
 ```
 
 ## Advanced customization
-The context menu provided displays text only. If you want to display icons or apply other customizations you can define a custom template called `menuItemTemplate`.
+The context menu provided displays text only. If you want to display icons or apply other customizations you can define a custom templete and pass it as property `menuItemTemplate`.
 Add this to your `app.component.html` 
 ```html
-<app-custom-context-menu menuClass="my-custom-style" >
-  <ng-template let-menuItem #menuItemTemplate>
+<ngx-json-contextmenu menuClass="my-custom-style" [menuItemTemplate]="customitemTemplate">
+  <ng-template let-menuItem #customitemTemplate>
     <div [style]="{display:'inline-block'}" [title]="menuItem.title">
       <div [style]="{margin:'0px 4px 0px 2px', display:'inline-block'}">😊</div>
       <div [style]="{display:'inline-block'}">

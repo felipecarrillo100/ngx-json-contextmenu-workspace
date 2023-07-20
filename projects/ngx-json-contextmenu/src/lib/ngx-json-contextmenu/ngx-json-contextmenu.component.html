@@ -22,12 +22,12 @@
 
 
 <ng-template let-menuItem #menuItemTemplateItem>
-  <ng-container *ngIf="templateRef" [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{$implicit:menuItem}" />
-  <ng-container *ngIf="!templateRef" [ngTemplateOutlet]="menuItemTemplateDefault" [ngTemplateOutletContext]="{$implicit:menuItem}" />
+  <ng-container *ngIf="menuItemTemplate" [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{$implicit:menuItem}" />
+  <ng-container *ngIf="!menuItemTemplate" [ngTemplateOutlet]="menuItemTemplateDefault" [ngTemplateOutletContext]="{$implicit:menuItem}" />
 </ng-template>
 <ng-template let-menuItem #menuItemTemplateSubmenu>
-  <ng-container *ngIf="templateRef" [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{$implicit:menuItem}" />
-  <ng-container *ngIf="!templateRef" [ngTemplateOutlet]="menuItemTemplateDefault" [ngTemplateOutletContext]="{$implicit:menuItem}" />
+  <ng-container *ngIf="menuItemTemplate" [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{$implicit:menuItem}" />
+  <ng-container *ngIf="!menuItemTemplate" [ngTemplateOutlet]="menuItemTemplateDefault" [ngTemplateOutletContext]="{$implicit:menuItem}" />
 </ng-template>
 <ng-template let-menuItem #menuItemTemplateDefault >
   <span [title]="menuItem.title">

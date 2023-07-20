@@ -1,4 +1,4 @@
-import { Component, Input, QueryList, ViewChildren, ViewChild, ContentChild, TemplateRef} from '@angular/core';
+import { Component, Input, QueryList, ViewChildren, ViewChild, TemplateRef} from '@angular/core';
 import {ContextMenuComponent} from "@perfectmemory/ngx-contextmenu";
 import {MenuItemEntryInternal, NgxJsonContextmenuService} from "../ngx-json-contextmenu.service";
 
@@ -8,9 +8,9 @@ import {MenuItemEntryInternal, NgxJsonContextmenuService} from "../ngx-json-cont
   styleUrls: ['./ngx-json-contextmenu.component.css']
 })
 export class NgxJsonContextmenuComponent {
-
+  @Input()
   // @ts-ignore
-  @ContentChild('menuItemTemplate',{static: false}) templateRef: TemplateRef<any>;
+  public menuItemTemplate: TemplateRef<any>;
 
   @Input()
   public rtl: boolean=false;
