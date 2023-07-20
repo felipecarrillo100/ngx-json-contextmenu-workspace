@@ -33,6 +33,6 @@
   <span [title]="menuItem.title">
     {{menuItem.label}}
     </span>
-  <input *ngIf="menuItem.checkbox" type="checkbox" [value]="menuItem.checkbox.value" (change)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
+  <input *ngIf="menuItem.checkbox" type="checkbox" [checked]="menuItem.checkbox.value" (change)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
 </ng-template>
 
