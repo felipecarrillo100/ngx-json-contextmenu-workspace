@@ -98,7 +98,7 @@ The component `ngx-json-contextmenu` supports multiple options:
  * disabled: Disables the context menu, if true not context menu will be displayed
 
 ## Style customization
-Define a class with `menuClass` then add the scss for it 
+Define a class with `menuClass` then add the css style for it 
 ```scss
 /** Adding Custom Styling To Context Menu */
 .my-custom-style {
