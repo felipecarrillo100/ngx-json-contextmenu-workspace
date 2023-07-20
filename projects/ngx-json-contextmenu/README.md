@@ -3,7 +3,6 @@
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
 ## Requirements
-This library requires that your project supports scss
 The library depends on @perfectmemory/ngx-contextmenu @angular/cdk that needs to be installed together with this library
 
 ## To install
