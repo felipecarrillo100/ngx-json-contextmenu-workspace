@@ -91,9 +91,10 @@ The service also allows you to open the context menu at an specific x,y location
 You are done!  At this moment you should have a fully functional context menu.
 
 ## Advanced options
-The component `` supports multiple options:
+The component `ngx-json-contextmenu` supports multiple options:
  * menuClass: allows you to define a class to customize the styling
  * rtl: if true then rtl is applied to the context menu
+ * disabled: Disables the context menu, if true not context menu will be displayed
 
 ## Style customization
 Define a class with `menuClass` then add the scss for it 
