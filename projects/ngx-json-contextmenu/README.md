@@ -31,9 +31,9 @@ Import the `NgxJsonContextmenuModule` module in your module imports in app.modul
 })
 export class AppModule { }
 ```
-Include a html div component at the top of your app.component.html.  You can use menuClass for styling
+Include the `ngx-json-contextmenu` component at the top of your app.component.html.  You can use menuClass for styling if needed.
 ```ts
-<ngx-json-contextmenu></ngx-json-contextmenu>
+<ngx-json-contextmenu menuClass="my-custom-style"></ngx-json-contextmenu>
 ```
 
 ## To use
@@ -83,6 +83,7 @@ export class AppComponent {
   }
 }
 ```
+The context menu is an array of elements of type MenuItemEntry which you can import from the library. 
 The service also allows you to open the context menu at an specific x,y location by using:
 ```ts
     this.contextMenuService.openMenuXY(x, y, menu);
@@ -92,8 +93,8 @@ You are done!  At this moment you should have a fully functional context menu.
 
 ## Advanced options
 The component `ngx-json-contextmenu` supports multiple options:
- * menuClass: allows you to define a class to customize the styling
- * rtl: if true then rtl is applied to the context menu
+ * menuClass: allows you to define a class to customize the style
+ * rtl: if true then right-to-left rtl is applied to the context menu
  * disabled: Disables the context menu, if true not context menu will be displayed
 
 ## Style customization
