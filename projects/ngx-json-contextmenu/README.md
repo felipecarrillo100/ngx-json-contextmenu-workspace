@@ -3,14 +3,14 @@
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
 ## Requirements
-The library depends on @perfectmemory/ngx-contextmenu @angular/cdk that needs to be installed together with this library
+The library depends on `@perfectmemory/ngx-contextmenu` and `@angular/cdk`, both need to be installed in order to use this library
 
 ## To install
 ```bash
-npm install ngx-json-contextmenu @angular/cdk @perfectmemory/ngx-contextmenu @angular/cdk
+npm install ngx-json-contextmenu @angular/cdk @perfectmemory/ngx-contextmenu
 ```
 
-Install the css/scss dependencies in your styles.scss
+Install the css dependencies in your styles file
 ```scss
 @import '@angular/cdk/overlay-prebuilt.css';
 @import 'ngx-json-contextmenu/assets/styles/base.css';
@@ -37,7 +37,7 @@ Include the `ngx-json-contextmenu` component at the top of your app.component.ht
 ```
 
 ## To use
-Create a JSON array with the entries. You will open the context-menu by using the service provided called `NgxJsonContextmenuService`
+Create a JSON array of type MenuItemEntry with the entries of the menu. You will open the context-menu by using the methods provided by the service called `NgxJsonContextmenuService`
 
 Here is an example: 
 
@@ -92,13 +92,13 @@ The service also allows you to open the context menu at an specific x,y location
 You are done!  At this moment you should have a fully functional context menu.
 
 ## Advanced options
-The component `ngx-json-contextmenu` supports multiple options:
+The component `ngx-json-contextmenu` supports the next options:
  * menuClass: allows you to define a class to customize the style
  * rtl: if true then right-to-left rtl is applied to the context menu
  * disabled: Disables the context menu, if true not context menu will be displayed
 
 ## Style customization
-Define a class with `menuClass` then add the css style for it 
+Define a class with `menuClass` then add the custom css style for it. Here an example 
 ```scss
 /** Adding Custom Styling To Context Menu */
 .my-custom-style {
@@ -133,7 +133,7 @@ Define a class with `menuClass` then add the css style for it
 ```
 
 ## Advanced customization
-The context menu provided is text only. If you want to use icons or apply other customization you can define your own custom template called `menuItemTemplate`.
+The context menu provided displays text only. If you want to display icons or apply other customizations you can define a custom template called `menuItemTemplate`.
 Add this to your `app.component.html` 
 ```html
 <app-custom-context-menu menuClass="my-custom-style" >
