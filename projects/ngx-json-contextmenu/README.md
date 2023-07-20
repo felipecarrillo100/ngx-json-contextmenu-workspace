@@ -13,7 +13,7 @@ npm install ngx-json-contextmenu @angular/cdk @perfectmemory/ngx-contextmenu @an
 Install the css/scss dependencies in your styles.scss
 ```scss
 @import '@angular/cdk/overlay-prebuilt.css';
-@import './node_modules/@perfectmemory/ngx-contextmenu/src/assets/stylesheets/base.scss';
+@import 'ngx-json-contextmenu/assets/styles/base.css';
 ```
 
 Import the `NgxJsonContextmenuModule` module in your module imports in app.module.ts
