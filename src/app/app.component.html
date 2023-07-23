@@ -1,17 +1,13 @@
-<ngx-json-contextmenu menuClass="my-custom-style" [menuItemTemplate]="mymenuItemTemplate">
-    <ng-template let-menuItem #mymenuItemTemplate>
-      <div [style]="{display:'inline-block'}" [title]="menuItem.title"  *ngIf="!menuItem.checkbox">
-        <div [style]="{margin:'0px 4px 0px 2px', display:'inline-block'}">😊</div>
-        <div [style]="{display:'inline-block'}">
-          {{menuItem.label}}
-        </div>
-      </div>
-      <label [for]="menuItem.label">
-        {{menuItem.label}}
-      </label>
-      <input [id]="menuItem.label" *ngIf="menuItem.checkbox" type="checkbox" [checked]="menuItem.checkbox.value" (change)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
-    </ng-template>
-</ngx-json-contextmenu>
+<ngx-json-contextmenu menuClass="my-custom-style" [menuItemTemplate]="mymenuItemTemplate"></ngx-json-contextmenu>
+<ng-template let-menuItem #mymenuItemTemplate>
+  <div [style]="{display:'inline-block'}" [title]="menuItem.title">
+    <div [style]="{margin:'0px 4px 0px 2px', display:'inline-block'}">😊</div>
+    <div [style]="{display:'inline-block'}">
+      {{menuItem.label}}
+    </div>
+  </div>
+  <input *ngIf="menuItem.checkbox" type="checkbox" [checked]="menuItem.checkbox.value" (checked)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
+</ng-template>
 
 <h1>Click on the buttons</h1>
 

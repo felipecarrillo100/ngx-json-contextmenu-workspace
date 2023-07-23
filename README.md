@@ -14,9 +14,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Build the library
 
-Run `ng build ngx-json-contextmenu` to build the project. The build artifacts will be stored in the `dist/ngx-json-contextmenu` directory.
+Run 
+```bash
+ng build ngx-json-contextmenu
+``` 
+to build the project. 
+The build artifacts will be stored in the `dist/ngx-json-contextmenu` directory.
 
 
 ## To publish to npm
 
-Change to foldeer `dist/ngx-json-contextmenu` then run `npm publish` to build the project. 
+Change to folder `dist/ngx-json-contextmenu` then run `npm publish` to publish the project. 
+```bash
+cd dist/ngx-json-contextmenu
+npm publish
+``` 

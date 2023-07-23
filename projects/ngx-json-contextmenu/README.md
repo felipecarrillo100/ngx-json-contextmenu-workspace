@@ -1,5 +1,29 @@
 # ngx-json-contextmenu
 
+This Angular library allows you to create a context-menu programatically from a json object. The JSON object is an array of Items where items can be:
+
+* normal items
+* dividers
+* checkboxes
+* submenus
+
+The following is an example:
+```ts
+    const contextMenu: MenuItemEntry[] = [
+      {label: "Compile", action: ()=>{} },
+      {label: "Run", action: ()=>{}},
+      {label: "Debug", action: ()=>{}},
+      {divider: true},
+      {label: "Show warnings", action: ()=>{}, checkbox:{value:true}},
+      {label: "Show errors", action: ()=>{}, checkbox:{value:false}},
+      {divider: true},
+      {label: "Build", action: undefined, children: [
+          {label: "Build Project", action: ()=>{} },
+          {label: "Rebuild", action: ()=>{}},
+        ]}
+    ];
+```
+
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
 ## Requirements
@@ -74,7 +98,10 @@ export class AppComponent {
       {label: "Run", action: ()=>{}},
       {label: "Debug", action: ()=>{}},
       {divider: true},
-      {label: "Build", action: undefined, children: [
+      {label: "Show warnings", action: ()=>{}, checkbox:{value:true}},
+      {label: "Show errors", action: ()=>{}, checkbox:{value:false}},
+      {divider: true},
+      {label: "Build", children: [
           {label: "Build Project", action: ()=>{} },
           {label: "Rebuild", action: ()=>{}},
         ]}
@@ -83,13 +110,15 @@ export class AppComponent {
   }
 }
 ```
-The context menu is an array of elements of type MenuItemEntry which you can import from the library. 
+The context menu is an array of elements of type MenuItemEntry which is a type you can import from the library.
+
+You are done!  At this moment you should have a fully functional context menu.
+
 The service also allows you to open the context menu at an specific x,y location by using:
 ```ts
     this.contextMenuService.openMenuXY(x, y, menu);
 ```
 
-You are done!  At this moment you should have a fully functional context menu.
 
 ## Advanced options
 The component `ngx-json-contextmenu` supports the next options:
@@ -134,19 +163,20 @@ Define a class with `menuClass` then add the custom css style for it. Here an ex
 ```
 
 ## Advanced customization
-The context menu provided displays text only. If you want to display icons or apply other customizations you can define a custom templete and pass it as property `menuItemTemplate`.
+The context menu provided displays text only. If you want to display icons or apply other customizations you can define a custom template and pass it in the property `menuItemTemplate`.
+
 Add this to your `app.component.html` 
 ```html
-<ngx-json-contextmenu menuClass="my-custom-style" [menuItemTemplate]="customitemTemplate">
-  <ng-template let-menuItem #customitemTemplate>
-    <div [style]="{display:'inline-block'}" [title]="menuItem.title">
-      <div [style]="{margin:'0px 4px 0px 2px', display:'inline-block'}">😊</div>
-      <div [style]="{display:'inline-block'}">
-        {{menuItem.label}}
-      </div>
+<ngx-json-contextmenu menuClass="my-custom-style" [menuItemTemplate]="mymenuItemTemplate"></ngx-json-contextmenu>
+<ng-template let-menuItem #mymenuItemTemplate>
+  <div [style]="{display:'inline-block'}" [title]="menuItem.title">
+    <div [style]="{margin:'0px 4px 0px 2px', display:'inline-block'}">😊</div>
+    <div [style]="{display:'inline-block'}">
+      {{menuItem.label}}
     </div>
-    <input *ngIf="menuItem.checkbox" type="checkbox" [checked]="menuItem.checkbox.value" (checked)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
-  </ng-template>
-</app-custom-context-menu>
+  </div>
+  <input *ngIf="menuItem.checkbox" type="checkbox" [checked]="menuItem.checkbox.value" (checked)="menuItem.action && menuItem.action()" [disabled]="menuItem.disabled">
+</ng-template>
+
 ```
 

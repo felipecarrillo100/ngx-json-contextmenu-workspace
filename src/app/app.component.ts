@@ -19,7 +19,10 @@ export class AppComponent {
       {label: "Run", action: ()=>{}},
       {label: "Debug", action: ()=>{}},
       {divider: true},
-      {label: "Build", action: undefined, children: [
+      {label: "Show warnings", action: ()=>{}, checkbox:{value:true}},
+      {label: "Show errors", action: ()=>{}, checkbox:{value:false}},
+      {divider: true},
+      {label: "Build", children: [
           {label: "Build Project", action: ()=>{} },
           {label: "Rebuild", action: ()=>{}},
         ]}
