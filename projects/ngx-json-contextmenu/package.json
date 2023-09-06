@@ -1,11 +1,11 @@
 {
   "name": "ngx-json-contextmenu",
-  "version": "1.0.1",
+  "version": "15.0.0",
   "peerDependencies": {
-    "@angular/common": "^16.0.0",
-    "@angular/core": "^16.0.0",
-    "@angular/cdk": "^16.1.5",
-    "@perfectmemory/ngx-contextmenu": "^16.0.1",
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "@angular/cdk": "^15.0.0",
+    "@perfectmemory/ngx-contextmenu": "^15.1.1",
     "install": "^0.13.0",
     "npm": "^9.8.1"
   },
