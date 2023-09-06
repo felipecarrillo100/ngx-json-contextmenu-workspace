@@ -11,6 +11,9 @@
 npm-debug.log
 yarn-error.log
 
+# Node / Project
+/projects/ngx-json-contextmenu/node_modules
+
 # IDEs and editors
 .idea/
 .project
